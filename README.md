@@ -3,4 +3,4 @@ L-Chat is a chat client which lets you chat over a Local Area network. You can s
 The project is in development phase and is currently not ready to be used.
 
 Usage:
-python app.py <ip to send message> <port to recieve messages> <port to send messages>
+python app.py &lt;ip to send message&gt; &lt;port to recieve messages&gt; &lt;port to send messages&gt;
