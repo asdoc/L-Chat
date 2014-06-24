@@ -29,7 +29,7 @@ class group_chat():
 		pass
 		
 	def send(self,msg):
-		# TODO send "MSG PVT ___" to self.ip
+		# TODO send "MSG self.group_id ___" to self.ip
 		pass
 
 class private_chat():
