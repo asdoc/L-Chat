@@ -6,16 +6,18 @@ class Communication:
 		self.ip = ip
 		self.my_port = my_port
 		self.send_port = send_port
-		self.serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		self.serversocket.bind(('', self.my_port))
+		if self.my_port != None:
+			self.serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			self.serversocket.bind(('', self.my_port))
 		
 	def recv(self):
 		self.serversocket.listen(5)
 		while True:
 			connection, address = self.serversocket.accept()
-			buf = connection.recv(64)
+			buf = connection.recv(1024)
 			if len(buf)> 0:
-				return buf
+				recv_packet = (buf,address[0])
+				return recv_packet
 				break
 		return None
 	

@@ -10,8 +10,8 @@ class thread_recv_msg(threading.Thread):
 		self.my_port = my_port
 	def run(self):
 		while True:
-			msg = my_communication.recv()
-			app.msg_recieved(msg)
+			msg,address = my_communication.recv()
+			app.msg_recieved(address+": "+msg)
 		
 class Connection:
 	ip=''
