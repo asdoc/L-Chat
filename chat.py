@@ -55,6 +55,15 @@ class main_loop():
 	''' A dict for storing {'ip': 'name' }'''
 	online_dict = {}
 	
+	''' object for public chat '''
+	public_chat_obj = None
+	
+	''' A dict for storing {'ip': private_chat object} for connected IPs '''
+	private_chat_obj_dict = {}
+	
+	''' A dict for storing {'group_id': group_chat object} for groups '''
+	group_chat_obj_dict = {}
+	
 	def __init__(self,name):
 		# TODO create UI
 	
